@@ -1,0 +1,14 @@
+.app {
+  font-size: 100px;
+  display: flex;
+}
+
+.pic-upload {
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+  margin: 10rem 40rem 1px 30px;
+  height: 100px;
+  width: 100rem;
+}

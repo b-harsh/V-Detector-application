@@ -1,0 +1,18 @@
+.uploadInput {
+  position: relative;
+  width: 40%;
+  margin: auto;
+  height: 200px;
+  border: 2px dashed #3e3737;
+  background: rgba(0, 0, 0, 0.15);
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: blue;
+}
+
+#imageUpload {
+  visibility: hidden;
+}
