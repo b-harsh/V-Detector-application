@@ -6,7 +6,8 @@ import {
   Routes,
 } from 'react-router-dom';
 import LandingPage from './pages/LandingPage.js';
-import PicAnalyzer from './pages/PicAnalyzer.js';
+// import PicAnalyzer from './pages/PicAnalyzer.js';
+import VideoAnalyzer from './pages/VideoAnalyzer.js';
 
 
 
@@ -15,7 +16,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/"  element={<LandingPage/>} />
-        <Route path="/pic" element={<PicAnalyzer/>} />
+        <Route path="/pic" element={<VideoAnalyzer/>} />
       </Routes>
     </Router>
   );

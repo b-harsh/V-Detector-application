@@ -3,6 +3,7 @@ import Navbar from '../Navbar.js';
 import Footer from '../Footer.js';
 import { React, useState } from 'react';
 import img from '../assets/cloud.webp';
+import { response } from 'express';
 
 const PicAnalyzer = () => {
   const [image, setImage] = useState(null);
@@ -12,6 +13,7 @@ const PicAnalyzer = () => {
 
     if (image) {
       console.log('Image Uploaded :', image);
+      processImage(image);
     } else {
       console.log('No image selected');
     }
@@ -36,6 +38,21 @@ const PicAnalyzer = () => {
       setImage(reader.result);
     };
     reader.readAsDataURL(file);
+  };
+
+
+
+  const processImage = (imageData)=>{
+     console.log('Processing Image: ' , imageData);
+     fetch("/vehicle_detection",{
+      method:"POST",
+      body:JSON.stringify({image:imageData}),
+      headers:{
+        "content-type" : 'application/json'
+      }
+     }).then(response=>{
+      // we will print the results here
+     });
   };
 
   return (
